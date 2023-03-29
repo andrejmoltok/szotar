@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import szotar from './api/szotar.js';
-import { useRouter } from 'next/router';
+import Router from 'next/router';
 import { useState, useEffect } from 'react';
 import useSWR from 'swr';
 
@@ -21,8 +21,6 @@ export async function getStaticProps({params}) {
 const fetcher = (url) => fetch(url).then((res) => res);
 
 export default function Word({wordData}) {
-
-    const router = useRouter();
     
     const {halan, bekuldo2, magyarazo2, magy, datum2} = wordData;
 
@@ -37,15 +35,13 @@ export default function Word({wordData}) {
     };
 
     useEffect(() => {
-        if (szotar.length > 0 && currentIndex >= 0 && currentIndex < szotar.length) {
-            router.push(`/${szotar[currentIndex].halan}`);
-        }
-      }, [currentIndex, router]);
+        Router.push(`/${szotar[currentIndex].halan}`);
+      }, [currentIndex]);
 
-    //   if (error) {
-    //     // console.log('Error loading data:', error);
-    //     return <div>Failed to load data</div>;}
-    //   if (!data) return <div>Loading...</div>;
+      if (error) {
+        // console.log('Error loading data:', error);
+        return <div>Failed to load data</div>;}
+      if (!data) return <div>Loading...</div>;
     
     return (
     <>
