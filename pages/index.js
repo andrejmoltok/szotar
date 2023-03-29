@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import Router from 'next/router';
 import szotar from './api/szotar.js';
 
 export default function Home({ initialData }) {
@@ -14,8 +14,8 @@ export default function Home({ initialData }) {
   };
 
   useEffect(() => {
-    router.push(`/${szotar[currentIndex].halan}`);
-  },[currentIndex, router]);
+    Router.push(`/${szotar[currentIndex].halan}`);
+  },[currentIndex]);
 
   return (
     <>
