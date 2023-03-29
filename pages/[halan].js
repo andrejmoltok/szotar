@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import szotar from '../pages/api/szotar.js';
+import szotar from './api/szotar.js';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import useSWR from 'swr';

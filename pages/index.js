@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import szotar from '../pages/api/szotar.js';
+import szotar from './api/szotar.js';
 
 export default function Home({ initialData }) {
 
