@@ -4,7 +4,6 @@ import szotar from './api/szotar.js';
 
 export default function Home({ initialData }) {
 
-  const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentData, setCurrentData] = useState(initialData[0]);
 
