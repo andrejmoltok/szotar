@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import szotar from '../szotar/szotar';
+import szotar from '../pages/api/szotar.js';
 
 export default function Home({ initialData }) {
 
@@ -20,15 +20,15 @@ export default function Home({ initialData }) {
   return (
     <>
     {szotar.length > 0 && (
-  <>
-    <p>{currentData.halan}</p>
-    <p>{currentData.bekuldo2}</p>
-    <p>{currentData.magyarazo2}</p>
-    <p>{currentData.magy}</p>
-    <p>{currentData.datum2.slice(0,10)}</p>
-  </>
-)}
-        <button onClick={handleNext}>{'>'}</button>
+        <>
+            <p>{currentData.halan}</p>
+            <p>{currentData.bekuldo2}</p>
+            <p>{currentData.magyarazo2}</p>
+            <p>{currentData.magy}</p>
+            <p>{currentData.datum2.slice(0,10)}</p>
+        </>
+    )}
+    <button onClick={handleNext}>{'>'}</button>
   </>
   )
 }

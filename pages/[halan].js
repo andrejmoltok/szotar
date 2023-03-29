@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import szotar from '../szotar/szotar.js';
+import szotar from '../pages/api/szotar.js';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import useSWR from 'swr';
 
 export async function getStaticPaths({}) {
-    const szotar = await import('../szotar/szotar.js').then(m => m.default);
+    const szotar = await import('../pages/api/szotar.js').then(m => m.default);
     const paths = szotar.map((entry) => ({
         params: { halan: entry.halan}
     }));
@@ -13,7 +13,7 @@ export async function getStaticPaths({}) {
 }
 
 export async function getStaticProps({params}) {
-    const szotar = await import('../szotar/szotar.js').then(m => m.default);
+    const szotar = await import('../pages/api/szotar.js').then(m => m.default);
     const wordData = szotar.find((entry) => entry.halan === params.halan);
     return { props: { wordData }};
 }
