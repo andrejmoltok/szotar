@@ -26,6 +26,7 @@ export default function Word({wordData}) {
 
     const handleNext = () => {
         setCurrentIndex((currentIndex + 1) % szotar.length);
+        
     };
     
     const handlePrev = () => {
@@ -34,29 +35,36 @@ export default function Word({wordData}) {
 
     useEffect(() => {
         if (szotar.length > 0) {
-            Router.push(`/${currentEntry.halan}`);
+        Router.push(`/${currentEntry.halan}`);
     }}, [currentEntry]);
 
     return (
     <>
+    <div className={styles.wrapper}>
+    <h1 className={styles.title}>Értelmetlenező Szótár Prodzsekt</h1>
+    <div className={styles.entryNavBtn}>
+    <div className={styles.entryContainerNavBtnLeft} onClick={handlePrev}>
+    </div>
     <div className={styles.entryMain}>
         <div className={styles.entryContainer}>
             <div className={styles.entryContainerH1}>
                 <h1>{currentEntry.halan}</h1>
             </div>
             <div className={styles.entryContainerNevek}>
-                <div className={styles.entryContainerBekuldo2}>Beküldő: {currentEntry.bekuldo2}</div>
-                <div className={styles.entryContainerMagyarazo2}>Magyarázó: {currentEntry.magyarazo2}</div>
-                <div className={styles.entryContainerDatum2}>Dátum: {currentEntry.datum2.slice(0,10)}</div>
+                <div className={styles.entryContainerBekuldo2}><div>Beküldő:</div><div>{currentEntry.bekuldo2}</div></div>
+                <div className={styles.entryContainerMagyarazo2}><div>Magyarázó:</div><div>{currentEntry.magyarazo2}</div></div>
+                <div className={styles.entryContainerDatum2}><div>Dátum:</div><div>{currentEntry.datum2.slice(0,10)}</div></div>
             </div>
             <div className={styles.entryContainerMagy}>
                 {currentEntry.magy}
             </div>
         </div>
-    </div>
         
-    <button onClick={handlePrev}>Prev</button>
-    <button onClick={handleNext}>Next</button>
+    </div>
+    <div className={styles.entryContainerNavBtnRight} onClick={handleNext}>
+    </div>
+    </div>
+    </div>
     </>
     )
 }

@@ -1,8 +1,18 @@
-.entryMain {
+.title {
+    text-align: center;
+}
+
+.wrapper {
     margin: auto;
-    width: 1000px;
+    width: 100%;
+
+}
+
+.entryMain {
+    margin: auto 0;
+    width: 950px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column nowrap;
     justify-content: center;
 }
 
@@ -27,7 +37,7 @@
     padding-top: 10px;
     border-top: 2px solid white;
     display: flex;
-    flex-direction: row;
+    flex-direction: row nowrap;
     justify-content: space-evenly;
 }
   
@@ -41,6 +51,43 @@
     margin-bottom: 10px;
 }
 
-.entryContainerMagy {
-    min-height: 10vh;
+.entryContainerBekuldo2,
+.entryContainerMagyarazo2,
+.entryContainerDatum2
+{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
+
+.entryContainerMagy {
+    min-height: 30vh;
+}
+
+.entryNavBtn{
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.entryContainerNavBtnRight {
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid white;
+  transform: rotate(90deg);
+}
+
+.entryContainerNavBtnLeft {
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid white;
+    transform: rotate(-90deg);
+  }
