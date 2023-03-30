@@ -44,7 +44,7 @@ export default function Word({wordData}) {
             <div className={styles.entryContainerH1}>
                 <h1>{currentEntry.halan}</h1>
             </div>
-            <div className={styles.nevek}>
+            <div className={styles.entryContainerNevek}>
                 <div className={styles.entryContainerBekuldo2}>Beküldő: {currentEntry.bekuldo2}</div>
                 <div className={styles.entryContainerMagyarazo2}>Magyarázó: {currentEntry.magyarazo2}</div>
                 <div className={styles.entryContainerDatum2}>Dátum: {currentEntry.datum2.slice(0,10)}</div>
