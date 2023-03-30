@@ -40,7 +40,6 @@ export default function Word({wordData}) {
 
     return (
     <>
-    <div className={styles.wrapper}>
     <h1 className={styles.title}>Értelmetlenező Szótár Prodzsekt</h1>
     <div className={styles.entryNavBtn}>
     <div className={styles.entryContainerNavBtnLeft} onClick={handlePrev}>
@@ -62,7 +61,6 @@ export default function Word({wordData}) {
         
     </div>
     <div className={styles.entryContainerNavBtnRight} onClick={handleNext}>
-    </div>
     </div>
     </div>
     </>
