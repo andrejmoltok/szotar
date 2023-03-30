@@ -210,7 +210,7 @@ let szotar = [
         "datum2": "2018-11-18T23:00:00.000Z"
     },
     {
-        "halan": "Főtt/párolt werteg",
+        "halan": "Főtt párolt werteg",
         "bekuldo2": "Kandabula",
         "magyarazo2": "Edeke",
         "magy": "Az eredeti felfogásban A`la Carte, azaz térképalátét. Erre fektették a térképet a nagy felfedezők. Pld Magellán, \naki felfedezte a mágneses vasutat, vagy Kopernikusz, aki a hupikék törpikéket fedezte fel, vagy Kincsem, \naki a hortobágyi ménest fedezte. Mai használatban, a lókolbász, parasztosan. Egy kis tormával, tálalják, és a NEsze geco!- felkiáltással kínálják. \nEttűl parasztos.",
@@ -252,7 +252,7 @@ let szotar = [
         "datum2": "2018-11-20T23:00:00.000Z"
     },
     {
-        "halan": "plecskosz/plecskoszni/\nplecskoszolni",
+        "halan": "plecskosz,plecskoszni,plecskoszolni",
         "bekuldo2": "Kandabula",
         "magyarazo2": "Molnar-Jolan",
         "magy": "Gázlómadarak csüdjére száradt, ürülékkel kevert sár. Ezt szívesen tisztogatják násztáncuk közepette, ez a plecskoszolás. A levakart réteget \npárjuk elé szórják, jelezve a fészekrakási szándékot.",
@@ -483,7 +483,7 @@ let szotar = [
         "datum2": "2018-11-23T23:00:00.000Z"
     },
     {
-        "halan": "Kend a bula?",
+        "halan": "Kend a bula",
         "bekuldo2": "Edeke",
         "magyarazo2": "Kandabula",
         "magy": "nem, de hívom a húgomat.",

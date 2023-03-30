@@ -2,10 +2,9 @@
 import szotar from './api/szotar.js';
 import Router from 'next/router';
 import { useState, useEffect } from 'react';
-import useSWR from 'swr';
+import styles from '../styles/Home.module.css';
 
 export async function getStaticPaths({}) {
-    const szotar = await import('../pages/api/szotar.js').then(m => m.default);
     const paths = szotar.map((entry) => ({
         params: { halan: entry.halan}
     }));
@@ -13,19 +12,14 @@ export async function getStaticPaths({}) {
 }
 
 export async function getStaticProps({params}) {
-    const szotar = await import('../pages/api/szotar.js').then(m => m.default);
     const wordData = szotar.find((entry) => entry.halan === params.halan);
     return { props: { wordData }};
 }
-
-const fetcher = (url) => fetch(url).then((res) => res);
 
 export default function Word({wordData}) {
     
     const {halan, bekuldo2, magyarazo2, magy, datum2} = wordData;
 
-    const { data, error, loading } = useSWR('/api/szotar.js',  fetcher);
-    
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const currentEntry = szotar?.[currentIndex];
@@ -33,26 +27,36 @@ export default function Word({wordData}) {
     const handleNext = () => {
         setCurrentIndex((currentIndex + 1) % szotar.length);
     };
+    
+    const handlePrev = () => {
+        setCurrentIndex((currentIndex - 1 + szotar.length) % szotar.length);
+    };
 
     useEffect(() => {
-        Router.push(`/${szotar[currentIndex].halan}`);
-      }, [currentIndex]);
+        if (szotar.length > 0) {
+            Router.push(`/${currentEntry.halan}`);
+    }}, [currentEntry]);
 
-      if (error) {
-        // console.log('Error loading data:', error);
-        return <div>Failed to load data</div>;}
-      if (!data) return <div>Loading...</div>;
-    
     return (
     <>
-      <div>
-            <p>{currentEntry.halan}</p>
-            <p>{currentEntry.bekuldo2}</p>
-            <p>{currentEntry.magyarazo2}</p>
-            <p>{currentEntry.magy}</p>
-            <p>{currentEntry.datum2.slice(0,10)}</p>
+    <div className={styles.entryMain}>
+        <div className={styles.entryContainer}>
+            <div className={styles.entryContainerH1}>
+                <h1>{currentEntry.halan}</h1>
+            </div>
+            <div className={styles.nevek}>
+                <div className={styles.entryContainerBekuldo2}>Beküldő: {currentEntry.bekuldo2}</div>
+                <div className={styles.entryContainerMagyarazo2}>Magyarázó: {currentEntry.magyarazo2}</div>
+                <div className={styles.entryContainerDatum2}>Dátum: {currentEntry.datum2.slice(0,10)}</div>
+            </div>
+            <div className={styles.entryContainerMagy}>
+                {currentEntry.magy}
+            </div>
         </div>
-        <button onClick={handleNext}>{'>'}</button>
+    </div>
+        
+    <button onClick={handlePrev}>Prev</button>
+    <button onClick={handleNext}>Next</button>
     </>
     )
 }
