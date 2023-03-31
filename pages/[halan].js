@@ -2,7 +2,7 @@
 import szotar from './api/szotar.js';
 import Router from 'next/router';
 import { useState, useEffect } from 'react';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Halan.module.css';
 
 export async function getStaticPaths({}) {
     const paths = szotar.map((entry) => ({
