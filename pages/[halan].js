@@ -40,8 +40,6 @@ export default function Word({wordData}) {
 
     return (
     <>
-    <div id={styles.wrapper}>
-        <div><h1 className={styles.title}>Értelmetlenező Szótár Prodzsekt</h1></div>
     <div className={styles.entryNavBtn}>
     <div className={styles.entryContainerNavBtnLeft} onClick={handlePrev}>
     </div>
@@ -51,18 +49,17 @@ export default function Word({wordData}) {
                 <h1>{currentEntry.halan}</h1>
             </div>
             <div className={styles.entryContainerNevek}>
-                <div className={styles.entryContainerBekuldo2}><div style={{paddingRight: '10px'}}>Beküldő:</div><div>{currentEntry.bekuldo2}</div></div>
-                <div className={styles.entryContainerMagyarazo2}><div style={{paddingRight: '10px'}}>Magyarázó:</div><div>{currentEntry.magyarazo2}</div></div>
-                <div className={styles.entryContainerDatum2}><div style={{paddingRight: '10px'}}>Dátum:</div><div>{currentEntry.datum2.slice(0,10)}</div></div>
+                <div className={styles.entryContainerBekuldo2}><div style={{paddingRight: '5px'}}>Beküldő:</div><div>{currentEntry.bekuldo2 ? currentEntry.bekuldo2 : 'Törölt Tag'}</div></div>
+                <div className={styles.entryContainerMagyarazo2}><div style={{paddingRight: '5px'}}>Magyarázó:</div><div>{currentEntry.magyarazo2 ? currentEntry.magyarazo2 : 'Törölt Tag'}</div></div>
+                <div className={styles.entryContainerDatum2}><div style={{paddingRight: '5px'}}>Dátum:</div><div>{currentEntry.datum2.slice(0,10)}</div></div>
             </div>
             <div className={styles.entryContainerMagy}>
-                {currentEntry.magy}
+                {currentEntry.magy ? currentEntry.magy : 'Törölt Tag'}
             </div>
         </div>
         
     </div>
     <div className={styles.entryContainerNavBtnRight} onClick={handleNext}>
-    </div>
     </div>
     </div>
     </>
