@@ -1,8 +1,7 @@
 .entryH1 {
     position: absolute;
-    top: 100px;
+    top: 0px;
     left: 35px;
-
 }
 
 .abcLinks {
@@ -17,10 +16,15 @@
 }
 
 .linkCont {
+    width: 31px;
     border: 2px solid white;
     padding: 5px 5px;
     font-size: 20px;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .link {
@@ -179,34 +183,87 @@
     }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1360px) {
     .entryH1 {
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 1285px) {
+    .entryH1 {
+        display: block;
         top: 60px;
     }
 }
 
-@media (min-width: 1150px) {
+@media (max-width: 1225px) {
+    .entryMain {
+        width: 800px;
+    }
+}
+
+@media (max-width: 1130px) {
+    .entryContainer {
+        width: 700px;
+    }
+    .entryMain {
+        width: 700px;
+    }
+    .halan {
+        width: 700px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .entryContainerNevek {
+        flex-wrap: wrap;
+    }
+    .entryContainerDatum2 {
+        margin: 0px 26.5px 10px;
+    }
+    .entryContainer {
+        width: 550px;
+    }
+    .entryMain {
+        width: 550px;
+    }
+    .halan {
+        width: 550px;
+    }
+}
+
+@media (max-width: 850px) {
+    .entryContainerDatum2 {
+        margin: 0px 26.5px 10px;
+    }
+    .entryContainer {
+        width: 400px;
+    }
+    .entryMain {
+        width: 400px;
+    }
+    .halan {
+        width: 400px;
+    }
+    .middleSection {
+        height: 670px;
+    }
+    .entry {
+        height: 110vh;
+    }
+}
+
+@media (max-width: 725px) {
     .entryH1 {
         display: none;
     }
 }
 
-@media (min-width: 1250px) {
+@media (max-width: 660px) {
     .entryH1 {
         display: block;
-        top: 0px;
-    }
-}
-
-@media (max-width: 650px) {
-    .entryH1 {
-        display: none;
-    }
-}
-
-@media (max-width: 600px) {
-    .entryH1 {
-        display: block;
-        top: 100px;
+        top: 110px;
     }
 }

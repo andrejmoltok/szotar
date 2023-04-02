@@ -7,8 +7,6 @@ import styles from '../../styles/Abc.module.css';
 
 const alphabet = "aábcdeéfghiíjklmnoóöőpqrstuúüűvwxyz".split("");
 
-
-
 export default function Letter({ entries }) {
   const router = useRouter();
   const { letter } = router.query
