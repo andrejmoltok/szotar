@@ -1,8 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import szotar from './api/szotar.js';
+import szotar from '../api/szotar.js';
 import Router from 'next/router';
+import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import styles from '../styles/Halan.module.css';
+import styles from '../../styles/Halan.module.css';
 
 export async function getStaticPaths({}) {
     const paths = szotar.map((entry) => ({
@@ -24,9 +25,24 @@ export default function Word({wordData}) {
 
     const currentEntry = szotar?.[currentIndex];
 
+    const handleHome = () => {
+        Router.push(`/`);
+    };
+
+    const handleABC = () => {
+        Router.push(`/abc/`);
+    };
+
+    const handleCollection = () => {
+        Router.push(`/collection/`);
+    };
+
+    const handleStat = () => {
+        Router.push(`/stat/`);
+    };
+
     const handleNext = () => {
         setCurrentIndex((currentIndex + 1) % szotar.length);
-        
     };
     
     const handlePrev = () => {
@@ -35,11 +51,17 @@ export default function Word({wordData}) {
 
     useEffect(() => {
         if (szotar.length > 0) {
-        Router.push(`/${currentEntry.halan}`);
+        Router.push(`/idorend/${currentEntry.halan}`);
     }}, [currentEntry]);
 
     return (
     <>
+    <Head>
+        <title>Értelmetlenező Szótár Prodzsekt</title>
+        <meta name="description" content="Értelmetlenező Szótár Prodzsekt" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon16.png" />
+      </Head>
     <div className={styles.entryNavBtn}>
     <div className={styles.entryContainerNavBtnLeft} onClick={handlePrev}>
     </div>
@@ -52,9 +74,16 @@ export default function Word({wordData}) {
                 <div className={styles.entryContainerBekuldo2}><div style={{paddingRight: '5px'}}>Beküldő:</div><div>{currentEntry.bekuldo2 ? currentEntry.bekuldo2 : 'Törölt Tag'}</div></div>
                 <div className={styles.entryContainerMagyarazo2}><div style={{paddingRight: '5px'}}>Magyarázó:</div><div>{currentEntry.magyarazo2 ? currentEntry.magyarazo2 : 'Törölt Tag'}</div></div>
                 <div className={styles.entryContainerDatum2}><div style={{paddingRight: '5px'}}>Dátum:</div><div>{currentEntry.datum2.slice(0,10)}</div></div>
+                <div className={styles.entryContainerIndex}><div>{`${currentIndex}/${szotar.length}`}</div></div>
             </div>
             <div className={styles.entryContainerMagy}>
                 {currentEntry.magy ? currentEntry.magy : 'Törölt Tag'}
+            </div>
+            <div className={styles.entryContainerNevek}>
+                <div className={styles.entryContainerMenuHome} onClick={handleHome}>Főoldal</div>
+                <div className={styles.entryContainerMenuABC} onClick={handleABC}>ABC</div>
+                <div className={styles.entryContainerMenuCollection} onClick={handleCollection}>Szógyűjtő</div>
+                <div className={styles.entryContainerMenuStat} onClick={handleStat}>Statisztika</div>
             </div>
         </div>
         

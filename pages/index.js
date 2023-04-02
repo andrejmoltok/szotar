@@ -10,11 +10,19 @@ export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleIdoRend = () => {
-    Router.push(`/${szotar[currentIndex].halan}`);
+    Router.push(`/idorend/${szotar[currentIndex].halan}`);
   };
 
   const handleABC = () => {
-    
+    Router.push(`/abc/A/`);
+  };
+
+  const handleCollection = () => {
+    Router.push('/collection');
+  };
+
+  const handleStat = () => {
+    Router.push('/stat');
   };
 
   return (
@@ -32,11 +40,11 @@ export default function Home() {
       <div className={styles.btn} onClick={handleABC}>
         <div className={styles.h3ABC}>ABC</div>
       </div>
-      <div className={styles.btn}>
+      <div className={styles.btn} onClick={handleCollection}>
         <div className={styles.h3Collection}>Szógyűjtő</div>
       </div>
-      <div className={styles.btn}>
-        <div className={styles.h3Stat}>Statisztika I</div>
+      <div className={styles.btn} onClick={handleStat}>
+        <div className={styles.h3Stat}>Statisztika</div>
       </div>
     </div>
     <div className={styles.attrib}>
