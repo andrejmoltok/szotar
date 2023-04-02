@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import Router from 'next/router';
-import szotar from './api/szotar.js';
+import szotar from '../szotar';
 import styles from '../styles/Index.module.css';
 
 export default function Home() {

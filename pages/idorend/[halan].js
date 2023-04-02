@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import szotar from '../api/szotar.js';
+import szotar from '../szotar.js';
 import Router from 'next/router';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -30,7 +30,7 @@ export default function Word({wordData}) {
     };
 
     const handleABC = () => {
-        Router.push(`/abc/`);
+        Router.push(`/abc/A/`);
     };
 
     const handleCollection = () => {

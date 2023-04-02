@@ -1,0 +1,78 @@
+.entryH1 {
+    position: absolute;
+    top: 100px;
+    left: 35px;
+
+}
+
+.abcLinks {
+    height: auto;
+    margin: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:right;
+    align-items: center;
+    gap: 5px;
+}
+
+.linkCont {
+    border: 2px solid white;
+    padding: 5px 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.entry {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 80vh;
+    width: 25vw;
+}
+
+.overFlowHidden {
+    overflow-y: hidden;
+}
+
+@media (min-height: 10vh) {
+    .entry {
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 1150px) {
+    .entryH1 {
+        top: 60px;
+    }
+}
+
+@media (min-width: 1150px) {
+    .entryH1 {
+        display: none;
+    }
+}
+
+@media (min-width: 1250px) {
+    .entryH1 {
+        display: block;
+        top: 0px;
+    }
+}
+
+@media (max-width: 650px) {
+    .entryH1 {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .entryH1 {
+        display: block;
+        top: 100px;
+    }
+}
