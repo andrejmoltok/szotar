@@ -33,18 +33,23 @@
 }
 
 .middleSection {
-    height: 530px;
+    height: auto;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
 }
 
 .entry {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     overflow-x: hidden;
     /* overflow-y: scroll; */
-    height: 80vh;
+    height: 700px;
     width: 25vw;
     min-width: 200px;
+    word-break: break-word;
 }
 
 .entriesLink {
@@ -53,10 +58,10 @@
     cursor: pointer;
 }
 
-.halan {
+/* .halan {
     margin: 50px;
     width: 100%;
-}
+} */
 
 .entryMain {
     margin: auto 0;
@@ -79,7 +84,8 @@
     margin: auto;
     font-size: 25px;
     display: inline-block;
-    white-space: nowrap;
+    white-space: wrap;
+    word-break: break-word;
 }
 
 .entryContainerNevek {
@@ -190,7 +196,6 @@
 }
 
 
-
 @media (max-width: 1285px) {
     .entryH1 {
         display: block;
@@ -211,12 +216,12 @@
     .entryMain {
         width: 700px;
     }
-    .halan {
-        width: 700px;
-    }
 }
 
 @media (max-width: 1000px) {
+    .abcLinks {
+        height: 80px;
+    }
     .entryContainerNevek {
         flex-wrap: wrap;
     }
@@ -227,9 +232,6 @@
         width: 550px;
     }
     .entryMain {
-        width: 550px;
-    }
-    .halan {
         width: 550px;
     }
 }
@@ -244,15 +246,6 @@
     .entryMain {
         width: 400px;
     }
-    .halan {
-        width: 400px;
-    }
-    .middleSection {
-        height: 670px;
-    }
-    .entry {
-        height: 110vh;
-    }
 }
 
 @media (max-width: 725px) {
@@ -261,9 +254,36 @@
     }
 }
 
+@media (max-width: 665px) {
+    .abcLinks {
+        height: 120px;
+    }
+}
+
 @media (max-width: 660px) {
     .entryH1 {
         display: block;
-        top: 110px;
+        top: 100px;
+    }
+}
+
+@media (max-width: 610px) {
+    .entryContainer {
+        width: 300px;
+    }
+    .entryMain {
+        width: 300px;
+    }
+    .entryContainerNevek {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 510px) {
+    .entryContainer {
+        width: 250px;
+    }
+    .entryMain {
+        width: 250px;
     }
 }
