@@ -39,7 +39,7 @@ export async function getStaticPaths() {
   }));
 
   // Return the paths object to Next.js
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 }
 
 // This function will be called at build time for each unique first letter
