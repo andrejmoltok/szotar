@@ -103,7 +103,7 @@
 .entryContainerDatum2,
 .entryContainerIndex,
 .entryContainerMenuHome,
-.entryContainerMenuABC,
+.entryContainerMenuIdorend,
 .entryContainerMenuCollection,
 .entryContainerMenuStat {
     margin: auto;
@@ -116,7 +116,7 @@
 .entryContainerMagyarazo2,
 .entryContainerDatum2,
 .entryContainerMenuHome,
-.entryContainerMenuABC,
+.entryContainerMenuIdorend,
 .entryContainerMenuCollection,
 .entryContainerMenuStat
 {
@@ -131,7 +131,7 @@
 }
 
 .entryContainerMenuHome,
-.entryContainerMenuABC,
+.entryContainerMenuIdorend,
 .entryContainerMenuCollection,
 .entryContainerMenuStat {
     cursor: pointer;
@@ -141,14 +141,14 @@
 
 /* .entryContainerMenuHome:hover::before */
 
-.entryContainerMenuABC:hover::before {
+.entryContainerMenuIdorend:hover::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/abc.jpg');
+    background-image: url('/clock.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.5;

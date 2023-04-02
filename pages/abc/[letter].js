@@ -94,7 +94,7 @@ export default function Letter({ entries }) {
             </div>
             <div className={styles.entryContainerNevek}>
                 <div className={styles.entryContainerMenuHome} onClick={handleHome}>Főoldal</div>
-                <div className={styles.entryContainerMenuABC} onClick={handleIdorend}>Időrend</div>
+                <div className={styles.entryContainerMenuIdorend} onClick={handleIdorend}>Időrend</div>
                 <div className={styles.entryContainerMenuCollection} onClick={handleCollection}>Szógyűjtő</div>
                 <div className={styles.entryContainerMenuStat} onClick={handleStat}>Statisztika</div>
             </div>
