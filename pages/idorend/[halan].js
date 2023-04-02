@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import szotar from '../szotar.js';
+import szotar from '../api/szotar';
 import Router from 'next/router';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -30,7 +30,7 @@ export default function Word({wordData}) {
     };
 
     const handleABC = () => {
-        Router.push(`/abc/A/`);
+        Router.push(`/abc/a/`);
     };
 
     const handleCollection = () => {
@@ -71,10 +71,18 @@ export default function Word({wordData}) {
                 <h1>{currentEntry.halan}</h1>
             </div>
             <div className={styles.entryContainerNevek}>
-                <div className={styles.entryContainerBekuldo2}><div style={{paddingRight: '5px'}}>Beküldő:</div><div>{currentEntry.bekuldo2 ? currentEntry.bekuldo2 : 'Törölt Tag'}</div></div>
-                <div className={styles.entryContainerMagyarazo2}><div style={{paddingRight: '5px'}}>Magyarázó:</div><div>{currentEntry.magyarazo2 ? currentEntry.magyarazo2 : 'Törölt Tag'}</div></div>
-                <div className={styles.entryContainerDatum2}><div style={{paddingRight: '5px'}}>Dátum:</div><div>{currentEntry.datum2.slice(0,10)}</div></div>
-                <div className={styles.entryContainerIndex}><div>{`${currentIndex}/${szotar.length}`}</div></div>
+                <div className={styles.entryContainerBekuldo2}><div style={{paddingRight: '5px'}}>Beküldő:</div>
+                    <div>{currentEntry.bekuldo2 ? currentEntry.bekuldo2 : 'Törölt Tag'}</div>
+                </div>
+                <div className={styles.entryContainerMagyarazo2}><div style={{paddingRight: '5px'}}>Magyarázó:</div>
+                    <div>{currentEntry.magyarazo2 ? currentEntry.magyarazo2 : 'Törölt Tag'}</div>
+                </div>
+                <div className={styles.entryContainerDatum2}><div style={{paddingRight: '5px'}}>Dátum:</div>
+                    <div>{currentEntry.datum2.slice(0,10)}</div>
+                </div>
+                <div className={styles.entryContainerIndex}>
+                    <div>{`${currentIndex}/${szotar.length-1}`}</div>
+                </div>
             </div>
             <div className={styles.entryContainerMagy}>
                 {currentEntry.magy ? currentEntry.magy : 'Törölt Tag'}
@@ -86,7 +94,6 @@ export default function Word({wordData}) {
                 <div className={styles.entryContainerMenuStat} onClick={handleStat}>Statisztika</div>
             </div>
         </div>
-        
     </div>
     <div className={styles.entryContainerNavBtnRight} onClick={handleNext}>
     </div>
