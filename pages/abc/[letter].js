@@ -69,7 +69,7 @@ export default function Letter({ entries }) {
           ))}
         </ul>
       </div>
-      {/* <div className={styles.halan}> */}
+      <div className={styles.halan}>
       <div className={styles.entryMain}>
         <div className={styles.entryContainer}>
             <div className={styles.entryContainerH1}>
@@ -100,8 +100,8 @@ export default function Letter({ entries }) {
             </div>
         </div>
     </div>
-      </div>
-    {/* </div> */}
+    </div>
+    </div>
   </>
   )
 }

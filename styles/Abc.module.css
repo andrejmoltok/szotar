@@ -58,13 +58,13 @@
     cursor: pointer;
 }
 
-/* .halan {
-    margin: 50px;
+.halan {
+    
     width: 100%;
-} */
+}
 
 .entryMain {
-    margin: auto 0;
+    margin: 0 auto;
     width: 950px;
     display: flex;
     flex-direction: column nowrap;
