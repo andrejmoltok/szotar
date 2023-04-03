@@ -1,4 +1,4 @@
-let szotar = [
+[
     {
       "halan": "Hejregát",
       "bekuldo2": "Kandabula",
@@ -5333,5 +5333,3 @@ let szotar = [
       "sorszam": 280
     }
   ]
-
-  export default szotar;

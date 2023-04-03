@@ -14,7 +14,9 @@ export async function getStaticPaths({}) {
 
 export async function getStaticProps({params}) {
     const wordData = szotar.find((entry) => entry.halan === params.halan);
-    return { props: { wordData }};
+    return { props: { 
+        wordData
+    }};
 }
 
 export default function Word({wordData}) {
@@ -34,7 +36,7 @@ export default function Word({wordData}) {
     };
 
     const handleCollection = () => {
-        Router.push(`/collection/`);
+        Router.push(`/collection/collection`);
     };
 
     const handleStat = () => {
@@ -52,7 +54,7 @@ export default function Word({wordData}) {
     useEffect(() => {
         if (szotar.length > 0) {
         Router.push(`/idorend/${currentEntry.halan}`);
-    }}, [currentEntry]);
+    }}, [currentEntry, szotar]);
 
     return (
     <>

@@ -33,7 +33,7 @@ export default function Letter({ entries }) {
   };
 
   const handleCollection = () => {
-    router.push(`/collection/`);
+    router.push(`/collection/collection`);
   };
 
   const handleStat = () => {
@@ -125,6 +125,9 @@ export async function getStaticProps({ params }) {
   // Get all the entries that start with the first letter from szotar.json file
 
   const entries = szotar.filter((entry) => entry.halan.charAt(0).toLowerCase() === params.letter.toLowerCase());
-  
-  return { props: { entries } };
+    
+  return { props: { 
+    entries
+   } 
+  };
 }
