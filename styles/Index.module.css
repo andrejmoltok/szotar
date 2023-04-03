@@ -8,6 +8,7 @@
 
 .btn {
     border: 2px solid white;
+    border-radius: 5px;
     width: 150px;
     height: 450px;
     margin: 20px 10px;
@@ -33,6 +34,7 @@
 .h3Collection,
 .h3Stat {
     border: 2px solid white;
+    border-radius: 5px;
     height: 100%;
     padding: 50px 10px;
     writing-mode: vertical-lr;
