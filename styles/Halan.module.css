@@ -33,7 +33,8 @@
     margin: auto;
     font-size: 25px;
     display: inline-block;
-    white-space: nowrap;
+    white-space: wrap;
+    word-break: break-word;
 }
 
 .entryContainerNevek {
