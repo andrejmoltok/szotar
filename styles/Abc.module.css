@@ -28,6 +28,10 @@
     align-items: center;
 }
 
+.linkCont:hover {
+    background-color:chocolate;
+}
+
 .link {
     color: white;
     text-decoration: none;
