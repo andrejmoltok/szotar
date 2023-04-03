@@ -54,7 +54,7 @@ export default function Word({wordData}) {
     useEffect(() => {
         if (szotar.length > 0) {
         Router.push(`/idorend/${currentEntry.halan}`);
-    }}, [currentEntry, szotar]);
+    }}, [currentEntry]);
 
     return (
     <>
