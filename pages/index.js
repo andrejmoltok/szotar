@@ -18,7 +18,7 @@ export default function Home() {
   };
 
   const handleCollection = () => {
-    Router.push('/collection');
+    Router.push('/collection/collection');
   };
 
   const handleStat = () => {

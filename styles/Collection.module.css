@@ -1,0 +1,33 @@
+.collapsible {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ULStyle {
+    padding: 0;
+}
+
+.collapsibleNames {
+    border: 1px solid white;
+    border-radius: 3px;
+    margin: 4px;
+    list-style-type: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.selectedName {
+    width: 200px;
+    border: 1px solid white;
+    border-radius: 3px;
+    list-style-type: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* .magyarazo2,
+.bekuldo2 {
+
+} */
