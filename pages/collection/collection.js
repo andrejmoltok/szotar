@@ -75,7 +75,7 @@ export default function Collection({szotar}) {
 }
 
 export async function getStaticProps() {
-    const szotarFilePath = path.join(process.cwd(), '/pages/szotar/szotar.js');
+    const szotarFilePath = path.join(process.cwd(), '/pages/szotar/szotar');
     const szotarData = fs.readFileSync(szotarFilePath, 'utf-8');
     const szotar = JSON.parse(szotarData);
   
