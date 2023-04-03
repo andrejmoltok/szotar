@@ -293,3 +293,31 @@
         width: 250px;
     }
 }
+
+@media (max-width: 475px) {
+    .entryContainer {
+        width: 250px;
+    }
+    .entryMain {
+        width: 250px;
+    }
+    .entryH1 {
+        display: none;
+    }
+    .abcLinks {
+        height: 160px;
+    }
+}
+
+@media (max-width: 440px) {
+    .entryContainer {
+        width: 230px;
+    }
+    .entryMain {
+        width: 230px;
+    }
+    .entryH1 {
+        display: block;
+        top: 140px;
+    }
+}
