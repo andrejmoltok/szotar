@@ -196,3 +196,9 @@
         flex-wrap: wrap;
     }
 }
+
+@media (max-width: 500px){
+    .entryMain, .entryContainer {
+        width: 250px;
+    }
+}
