@@ -54,7 +54,7 @@ export default function Collection() {
     };
     
     const handleStat = () => {
-        router.push(`/stat/`);
+        router.push(`/stat/stat`);
     };
 
     return (

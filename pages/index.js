@@ -22,7 +22,7 @@ export default function Home() {
   };
 
   const handleStat = () => {
-    Router.push('/stat');
+    Router.push('/stat/stat');
   };
 
   return (

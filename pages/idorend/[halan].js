@@ -40,7 +40,7 @@ export default function Word({wordData}) {
     };
 
     const handleStat = () => {
-        Router.push(`/stat/`);
+        Router.push(`/stat/stat`);
     };
 
     const handleNext = () => {

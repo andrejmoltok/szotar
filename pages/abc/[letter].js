@@ -37,7 +37,7 @@ export default function Letter({ entries }) {
   };
 
   const handleStat = () => {
-    router.push(`/stat/`);
+    router.push(`/stat/stat`);
   };
   
   // Render the entries list
@@ -53,7 +53,7 @@ export default function Letter({ entries }) {
     <div className={styles.abcLinks}>       
           {alphabet.map((letter, index) => (
             <div key={index} className={styles.linkCont}>
-            <Link  href={`/abc/${letter}`} className={styles.link} onClick={() => {setHalan(0)}}>
+            <Link  href={`/abc/${letter}`} className={styles.link} onClick={() => {handleIndex(0)}}>
               {letter.toUpperCase()}
             </Link>
             </div>
