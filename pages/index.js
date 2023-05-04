@@ -21,8 +21,8 @@ export default function Home() {
     Router.push('/collection/collection');
   };
 
-  const handleStat = () => {
-    Router.push('/stat/stat');
+  const handleAbout = () => {
+    Router.push('/about/about');
   };
 
   return (
@@ -43,8 +43,8 @@ export default function Home() {
       <div className={styles.btn} onClick={handleCollection}>
         <div className={styles.h3Collection}>Szógyűjtő</div>
       </div>
-      <div className={styles.btn} onClick={handleStat}>
-        <div className={styles.h3Stat}>Statisztika</div>
+      <div className={styles.btn} onClick={handleAbout}>
+        <div className={styles.h3About}>Rólunk</div>
       </div>
     </div>
     <div className={styles.attrib}>

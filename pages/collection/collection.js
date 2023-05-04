@@ -1,5 +1,6 @@
 import szotar from '../api/szotar';
 import styles from '../../styles/Collection.module.css';
+import Head from 'next/head';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -53,17 +54,23 @@ export default function Collection() {
         router.push(`/abc/a`);
     };
     
-    const handleStat = () => {
-        router.push(`/stat/stat`);
+    const handleAbout = () => {
+        router.push(`/about/about`);
     };
 
     return (
         <>
+        <Head>
+            <title>Értelmetlenező Szótár Prodzsekt</title>
+            <meta name="description" content="Értelmetlenező Szótár Prodzsekt" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="icon" href="/favicon16.png" />
+        </Head>
             <div className={styles.entryContainerNevek}>
                 <div className={styles.entryContainerMenuHome} onClick={handleHome}>Főoldal</div>
                 <div className={styles.entryContainerMenuIdorend} onClick={handleIdorend}>Időrend</div>
                 <div className={styles.entryContainerMenuABC} onClick={handleABC}>ABC</div>
-                <div className={styles.entryContainerMenuStat} onClick={handleStat}>Statisztika</div>
+                <div className={styles.entryContainerMenuAbout} onClick={handleAbout}>Rólunk</div>
             </div>
             {!isCollapsed ? 
                 <div className={styles.collapsible} style={contentStyle}>

@@ -1,22 +1,22 @@
 .entryContainerNevek {
     margin: auto;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .entryContainerMenuHome,
 .entryContainerMenuABC,
 .entryContainerMenuIdorend,
-.entryContainerMenuStat {
-    margin: auto;
+.entryContainerMenuAbout {
     border: 2px solid white;
     border-radius: 5px;
     padding: 5px;
-    margin-bottom: 10px;
+    margin: 10px auto;
     width: 210px;
     display: flex;
     flex-direction: row;
@@ -54,7 +54,7 @@
     transition: opacity 0.3s ease-in-out;
 }
 
-.entryContainerMenuStat:hover::before {
+.entryContainerMenuAbout:hover::before {
     content: "";
     position: absolute;
     top: 0;
@@ -84,9 +84,9 @@
 .ULStyle {
     display: flex;
     flex-direction: row;
-    margin: 10px 25px;
+    margin: 10px 0px;
     padding: 0;
-    width: 230px;
+    width: 340px;
 }
 
 .collapsibleNames {

@@ -8,7 +8,9 @@ import styles from '../../styles/Abc.module.css';
 const alphabet = "aábcdeéfghiíjklmnoóöőpqrstuúüűvwxyz".split("");
 
 export default function Letter({ entries }) {
+
   const router = useRouter();
+
   const { letter } = router.query
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,8 +38,8 @@ export default function Letter({ entries }) {
     router.push(`/collection/collection`);
   };
 
-  const handleStat = () => {
-    router.push(`/stat/stat`);
+  const handleAbout = () => {
+    router.push(`/about/about`);
   };
   
   // Render the entries list
@@ -96,7 +98,7 @@ export default function Letter({ entries }) {
                 <div className={styles.entryContainerMenuHome} onClick={handleHome}>Főoldal</div>
                 <div className={styles.entryContainerMenuIdorend} onClick={handleIdorend}>Időrend</div>
                 <div className={styles.entryContainerMenuCollection} onClick={handleCollection}>Szógyűjtő</div>
-                <div className={styles.entryContainerMenuStat} onClick={handleStat}>Statisztika</div>
+                <div className={styles.entryContainerMenuStat} onClick={handleAbout}>Rólunk</div>
             </div>
         </div>
     </div>

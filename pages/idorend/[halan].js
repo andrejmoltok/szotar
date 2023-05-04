@@ -39,8 +39,8 @@ export default function Word({wordData}) {
         Router.push(`/collection/collection`);
     };
 
-    const handleStat = () => {
-        Router.push(`/stat/stat`);
+    const handleAbout = () => {
+        Router.push(`/about/about`);
     };
 
     const handleNext = () => {
@@ -63,7 +63,7 @@ export default function Word({wordData}) {
         <meta name="description" content="Értelmetlenező Szótár Prodzsekt" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon16.png" />
-      </Head>
+    </Head>
     <div className={styles.entryNavBtn}>
     <div className={styles.entryContainerNavBtnLeft} onClick={handlePrev}>
     </div>
@@ -93,7 +93,7 @@ export default function Word({wordData}) {
                 <div className={styles.entryContainerMenuHome} onClick={handleHome}>Főoldal</div>
                 <div className={styles.entryContainerMenuABC} onClick={handleABC}>ABC</div>
                 <div className={styles.entryContainerMenuCollection} onClick={handleCollection}>Szógyűjtő</div>
-                <div className={styles.entryContainerMenuStat} onClick={handleStat}>Statisztika</div>
+                <div className={styles.entryContainerMenuAbout} onClick={handleAbout}>Rólunk</div>
             </div>
         </div>
     </div>

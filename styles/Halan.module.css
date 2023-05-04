@@ -54,7 +54,7 @@
 .entryContainerMenuHome,
 .entryContainerMenuABC,
 .entryContainerMenuCollection,
-.entryContainerMenuStat {
+.entryContainerMenuAbout {
     margin: auto;
     border: 2px solid white;
     border-radius: 5px;
@@ -68,7 +68,7 @@
 .entryContainerMenuHome,
 .entryContainerMenuABC,
 .entryContainerMenuCollection,
-.entryContainerMenuStat
+.entryContainerMenuAbout
 {
     width: 210px;
     display: flex;
@@ -83,7 +83,7 @@
 .entryContainerMenuHome,
 .entryContainerMenuABC,
 .entryContainerMenuCollection,
-.entryContainerMenuStat {
+.entryContainerMenuAbout {
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -119,7 +119,7 @@
     transition: opacity 0.3s ease-in-out;
 }
 
-.entryContainerMenuStat:hover::before {
+.entryContainerMenuAbout:hover::before {
     content: "";
     position: absolute;
     top: 0;
