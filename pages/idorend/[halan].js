@@ -65,8 +65,7 @@ export default function Word({wordData}) {
         <link rel="icon" href="/favicon16.png" />
     </Head>
     <div className={styles.entryNavBtn}>
-    <div className={styles.entryContainerNavBtnLeft} onClick={handlePrev}>
-    </div>
+    <div className={styles.entryContainerNavBtnLeft} onClick={handlePrev}></div>
     <div className={styles.entryMain}>
         <div className={styles.entryContainer}>
             <div className={styles.entryContainerH1}>
@@ -97,8 +96,7 @@ export default function Word({wordData}) {
             </div>
         </div>
     </div>
-    <div className={styles.entryContainerNavBtnRight} onClick={handleNext}>
-    </div>
+    <div className={styles.entryContainerNavBtnRight} onClick={handleNext}></div>
     </div>
     </>
     )
