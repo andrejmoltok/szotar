@@ -18,7 +18,14 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    background-color: black;
+    transition: all 0.3s ease;
 }
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
 
 .attrib {
     margin: auto;
